@@ -1,4 +1,4 @@
-public abstract class Terminal {
+public abstract class Terminal extends Expression {
 
 
 }

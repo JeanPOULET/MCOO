@@ -1,11 +1,23 @@
+import java.util.ArrayList;
+
 public abstract class NonTerminal implements Expression{
 
-    public void ajouter(Expression e){
+    //Attributs
+    private ArrayList<Expression> ExpressionList = new ArrayList<Expression>;
 
+    //Getteur
+    public ArrayList<Expression> getExpressionList(){
+        return ExpressionList;
+    }
+
+    //Méthodes
+    public void ajouter(Expression e){
+        ExpressionList.add(e);
     }
 
     public Expression supprimer(int i){
-        Expression e = null;
+        Expression e = ExpressionList.get(i);
+        ExpressionList.remove(i);
         return e;
     }
 }

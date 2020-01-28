@@ -1,2 +1,2 @@
-public class Litteral extends Terminal {
+public class Litteral implements Terminal {
 }

@@ -1,4 +1,3 @@
-import com.sun.javafx.applet.ExperimentalExtensions;
 
 public abstract class NonTerminal implements Expression{
 

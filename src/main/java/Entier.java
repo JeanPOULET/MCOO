@@ -1,4 +1,4 @@
-public class Entier extends Terminal {
+public class Entier implements Terminal {
 
 
 }

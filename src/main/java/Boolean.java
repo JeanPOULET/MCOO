@@ -1,2 +1,2 @@
-public class Boolean extends Terminal {
+public class Boolean implements Terminal {
 }

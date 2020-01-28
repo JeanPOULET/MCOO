@@ -1,3 +1,3 @@
-public abstract class NonTerminal extends Expression{
+public abstract class NonTerminal implements Expression{
 
 }

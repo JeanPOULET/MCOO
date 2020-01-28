@@ -1,4 +1,3 @@
-
 public abstract class NonTerminal implements Expression{
 
     public void ajouter(Expression e){

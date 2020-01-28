@@ -1,5 +1,4 @@
-
-public abstract class Terminal implements Expression {
+public interface Terminal extends Expression {
 
 
 }

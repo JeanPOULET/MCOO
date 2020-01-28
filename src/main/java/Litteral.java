@@ -1,3 +1,3 @@
-public class Litteral extends Terminal {
+public class Litteral implements Terminal {
     public String nom;
 }

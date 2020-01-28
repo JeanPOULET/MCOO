@@ -1,4 +1,4 @@
-public class Entier extends Terminal {
-    private int valeur;
+public class Entier implements Terminal {
 
+    private int valeur;
 }

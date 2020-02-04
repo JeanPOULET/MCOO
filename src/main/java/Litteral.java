@@ -1,5 +1,9 @@
 public class Litteral implements Terminal {
 
-    public String nom;
+    private String nom;
+
+    public Litteral(String str){
+        nom = str;
+    }
 
 }

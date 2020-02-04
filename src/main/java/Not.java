@@ -1,2 +1,8 @@
-public class Not extends NonTerminal {
+
+public class Not extends NonTerminal  {
+
+
+
+
 }
+

@@ -5,7 +5,7 @@ public abstract class NonTerminal implements Expression{
     //Attributs
     private ArrayList<Expression> ExpressionList = new ArrayList<Expression>();
 
-    //Getteur
+    //Getter
     public ArrayList<Expression> getExpressionList(){
         return ExpressionList;
     }

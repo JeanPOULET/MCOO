@@ -16,7 +16,7 @@ public class Main {
                 f.makeNode("PourTout", x, f.makeNode("Appartient", x, X), f.makeNode("Superieur", x, nb[0]))
         );
 
-
+        exemple1.afficher("");
     }
 
 }

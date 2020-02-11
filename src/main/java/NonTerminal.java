@@ -2,15 +2,12 @@ import java.util.ArrayList;
 
 public abstract class NonTerminal implements Expression{
 
-    //Attributs
     private ArrayList<Expression> ExpressionList = new ArrayList<Expression>();
 
-    //Getter
     public ArrayList<Expression> getExpressionList(){
         return ExpressionList;
     }
 
-    //Méthodes
     public void ajouter(Expression e){
         ExpressionList.add(e);
     }

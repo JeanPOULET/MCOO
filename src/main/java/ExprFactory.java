@@ -27,7 +27,7 @@ public class ExprFactory {
         throw new Exception();
     }
 
-    public Expression makeNNode(String type, Expression... children) throws Exception {
+    public Expression makeNode(String type, Expression... children) throws Exception {
         NonTerminal a;
         if(type ==  "Appartient"){
             a = new Appartient();

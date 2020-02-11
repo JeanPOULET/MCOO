@@ -12,8 +12,7 @@ public class ExprFactory {
             return b;
         }
 
-        throw new Exception() ;
-
+        throw new Exception();
     }
 
     public Expression makeNNode(String type, Expression... children) throws Exception {
@@ -85,6 +84,7 @@ public class ExprFactory {
         for(int i = 0; i < children.length; i++){
             a.ajouter(children[i]);
         }
+
         return a;
     }
 }

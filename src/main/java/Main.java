@@ -25,7 +25,7 @@ public class Main {
             System.out.println(("Erreur de typage, le type :"+e.getWrongTyping()+" pour un terminal : ");
         }
 
-
+        exemple1.afficher("");
     }
 
 }

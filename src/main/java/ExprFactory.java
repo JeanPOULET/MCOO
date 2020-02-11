@@ -12,13 +12,13 @@ public class ExprFactory {
     }
 
     public Expression makeLeaf(String type, Object value) throws Exception {
-        if(type == "Litteral"){
+        if(type.equals("Litteral")){
             Litteral l = new Litteral((String)value);
             return l;
-        }else if(type == "Entier"){
+        }else if(type.equals("Entier")){
             Entier e = new Entier((Integer)value);
             return e;
-        }else if(type == "Boolean"){
+        }else if(type.equals("Boolean")){
             ExprBool b = new ExprBool((Boolean)value);
             return b;
         }
@@ -28,64 +28,64 @@ public class ExprFactory {
 
     public Expression makeNode(String type, Expression... children) throws Exception {
         NonTerminal a;
-        if(type ==  "Appartient"){
+        if(type.equals("Appartient")){
             a = new Appartient();
         }
-        else if(type ==  "Card"){
+        else if(type.equals("Card")){
             a = new Card();
         }
-        else if(type ==  "Conjonction"){
+        else if(type.equals("Conjonction")){
             a = new Conjonction();
         }
-        else if(type ==  "DifferentArit"){
+        else if(type.equals("DifferentArit")){
             a = new DifferentArit();
         }
-        else if(type ==  "Disjonction"){
+        else if(type.equals("Disjonction")){
             a = new Disjonction();
         }
-        else if(type ==  "IlExiste"){
+        else if(type.equals("IlExiste")){
             a = new IlExiste();
         }
-        else if(type ==  "Inclusion"){
+        else if(type.equals("Inclusion")){
             a = new Inclusion();
         }
-        else if(type ==  "InclusionStricte"){
+        else if(type.equals("InclusionStricte")){
             a = new InclusionStricte();
         }
-        else if(type ==  "Inferieur"){
+        else if(type.equals("Inferieur")){
             a = new Inferieur();
         }
-        else if(type ==  "Moins"){
+        else if(type.equals("Moins")){
             a = new Moins();
         }
-        else if(type ==  "Not"){
+        else if(type.equals("Not")){
             a = new Not();
         }
-        else if(type ==  "Plus"){
+        else if(type.equals("Plus")){
             a = new Plus();
         }
-        else if(type ==  "PourTout"){
+        else if(type.equals("PourTout")){
             a = new PourTout();
         }
-        else if(type ==  "StrictInferieur"){
+        else if(type.equals("StrictInferieur")){
             a = new StrictInferieur();
         }
-        else if(type ==  "StrictSuperieur"){
+        else if(type.equals("StrictSuperieur")){
             a = new StrictSuperieur();
         }
-        else if(type ==  "Superieur"){
+        else if(type.equals("Superieur")){
             a = new Superieur();
         }
-        else if(type ==  "DifferentEnsemble"){
+        else if(type.equals("DifferentEnsemble")){
             a = new DifferentEnsemble();
         }
-        else if(type ==  "EgalArit"){
+        else if(type.equals("EgalArit")){
             a = new EgalArit();
         }
-        else if(type ==  "EgalEnsemble"){
+        else if(type.equals("EgalEnsemble")){
             a = new EgalEnsemble();
         }
-        else if(type ==  "EnsembleEnExtension"){
+        else if(type.equals("EnsembleEnExtension")){
             a = new EnsembleEnExtension();
         }
         else{

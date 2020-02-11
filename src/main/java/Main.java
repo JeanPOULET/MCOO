@@ -16,6 +16,7 @@ public class Main {
                 f.makeNode("Egalite", X, ens123),
                 f.makeNode("QuelqueSoit", x, f.makeNode("Appartient", x, X), f.makeNode("Sup", x, nb[0]))
         );
+
     }
 
 }

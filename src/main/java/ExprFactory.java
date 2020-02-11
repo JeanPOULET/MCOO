@@ -27,8 +27,8 @@ public class ExprFactory {
         else if(type ==  "Conjonction"){
             a = new Conjonction();
         }
-        else if(type ==  "Delse ifferent"){
-            a = new Different();
+        else if(type ==  "DifferentArit"){
+            a = new DifferentArit();
         }
         else if(type ==  "Disjonction"){
             a = new Disjonction();
@@ -65,6 +65,18 @@ public class ExprFactory {
         }
         else if(type ==  "Superieur"){
             a = new Superieur();
+        }
+        else if(type ==  "DifferentEnsemble"){
+            a = new DifferentEnsemble();
+        }
+        else if(type ==  "EgalArit"){
+            a = new EgalArit();
+        }
+        else if(type ==  "EgalEnsemble"){
+            a = new EgalEnsemble();
+        }
+        else if(type ==  "EnsembleEnExtension"){
+            a = new EnsembleEnExtension();
         }
         else{
             throw new Exception();

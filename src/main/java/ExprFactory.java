@@ -1,4 +1,16 @@
+import sun.jvm.hotspot.oops.Instance;
+
 public class ExprFactory {
+
+    private static ExprFactory INSTANCE = null;
+
+    public static ExprFactory getInstance(){
+        if(INSTANCE == null){
+            INSTANCE = new ExprFactory();
+        }
+
+        return INSTANCE;
+    }
 
     public Expression makeLeaf(String type, Object value) throws Exception {
         if(type == "Litteral"){

@@ -1,18 +1,18 @@
 public class PourTout extends NonTerminal {
 
-    public Expression ExprD;
-    public Expression ExprG;
+    public Expression [] expr;
 
-    public PourTout(Expression D, Expression G){
-        ExprD = D;
-        ExprG = G;
+
+    public PourTout(Expression...  D){
+        expr = D;
     }
 
-    public void afficher(String prefixe){
+    public void afficher(String prefixe) {
         System.out.println(prefixe + "|___ PourTout");
-        prefixe = prefixe+"|___";
-        ExprD.afficher(prefixe);
-        ExprG.afficher(prefixe);
+        prefixe = prefixe + "|___";
+        for (Expression ex : expr){
+            ex.afficher(prefixe);
+        }
     }
 
 }

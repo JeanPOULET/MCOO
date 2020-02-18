@@ -17,15 +17,16 @@ public class Main {
                     f.makeNode("EgalArit", X, ens123),
                     f.makeNode("PourTout", x, f.makeNode("Appartient", x, X), f.makeNode("Superieur", x, nb[0]))
             );
+            exemple1.afficher("");
         }
         catch(InvalidExpression e){
             System.out.println("Erreur l'expression : "+e.getWrongExpression()+" n'existe pas !");
         }
         catch (InvalidTyping e ){
-            System.out.println(("Erreur de typage, le type :"+e.getWrongTyping()+" pour un terminal : ");
+            System.out.println("Erreur de typage, le type :"+e.getWrongTyping()+" pour un terminal : ");
         }
 
-        exemple1.afficher("");
+
     }
 
 }

@@ -4,9 +4,9 @@ public class Inferieur extends NonTerminal {
     public Expression ExprG;
     public char cara = '≤';
 
-    public Inferieur(Expression D, Expression G){
-        ExprD = D;
+    public Inferieur(Expression G, Expression D){
         ExprG = G;
+        ExprD = D;
     }
 
     public void afficher(String prefixe){

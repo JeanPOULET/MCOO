@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public abstract class NonTerminal implements Expression{
 
-    private ArrayList<Expression> ExpressionList = new ArrayList<Expression>();
+    public ArrayList<Expression> ExpressionList = new ArrayList<Expression>();
 
     public ArrayList<Expression> getExpressionList(){
         return ExpressionList;

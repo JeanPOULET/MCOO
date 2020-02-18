@@ -17,6 +17,7 @@ public class EgalArit extends NonTerminal {
     }
 
     public Object accept(IVisitor visitor, Object o){
+
         return visitor.visit(this);
     }
 

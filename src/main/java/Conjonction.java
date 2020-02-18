@@ -5,8 +5,8 @@ public class Conjonction extends NonTerminal {
     public char cara = '∧';
 
     public Conjonction(Expression D, Expression G){
-        ExprD = D;
         ExprG = G;
+        ExprD = D;
     }
 
     public void afficher(String prefixe){

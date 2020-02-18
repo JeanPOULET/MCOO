@@ -2,7 +2,7 @@ public class Appartient extends NonTerminal {
 
     public Expression ExprD;
     public Expression ExprG;
-    public char cara  = 'a';
+    public char cara  = '∈';
 
     public Appartient(Expression D, Expression G){
         ExprD = D;

@@ -13,6 +13,7 @@ public class Litteral implements Terminal {
     public String getValue(){return this.nom;}
 
     public Object accept(IVisitor visitor, Object o){
+
         return visitor.visit(this);
     }
 

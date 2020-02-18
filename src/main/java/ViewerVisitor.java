@@ -2,47 +2,112 @@ public class ViewerVisitor implements IVisitor {
 
 
     public Object visit(Appartient o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(Card o) {
         System.out.print(" "+o.str+"(");
+        for(Expression expr : o.ExpressionList){
+            expr.accept(this,o);
+        }
+
         return o;
     }
 
     public Object visit(Conjonction o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(DifferentArit o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(DifferentEnsemble o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(EnsembleEnExtension o) {
-        System.out.print(" "+o.cara);
+        System.out.print(" {");
+        for(Expression expr : o.ExpressionList){
+            expr.accept(this,o);
+            System.out.print(",");
+        }
+        System.out.print(" }");
         return o;
     }
 
     public Object visit(Disjonction o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(EgalArit o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(EgalEnsemble o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
@@ -58,21 +123,51 @@ public class ViewerVisitor implements IVisitor {
 
     public Object visit(IlExiste o) {
         System.out.print(" "+o.cara);
+        System.out.print(" (");
+
+        for(Expression expr : o.ExpressionList){
+            expr.accept(this,o);
+        }
+        System.out.print(" )");
         return o;
     }
 
     public Object visit(Inclusion o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(InclusionStricte o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(Inferieur o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
@@ -82,37 +177,89 @@ public class ViewerVisitor implements IVisitor {
     }
 
     public Object visit(Moins o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(Not o) {
         System.out.print(" "+o.str);
+        for(Expression expr : o.ExpressionList){
+            expr.accept(this,o);
+        }
+
         return o;
     }
 
     public Object visit(Plus o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(PourTout o) {
+        int i=0;
         System.out.print(" "+o.cara);
+        System.out.print(" (");
+
+        for(Expression expr : o.ExpressionList){
+            expr.accept(this,o);
+        }
+        System.out.print(" )");
         return o;
     }
 
     public Object visit(StrictInferieur o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(StrictSuperieur o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
         return o;
     }
 
     public Object visit(Superieur o) {
-        System.out.print(" "+o.cara);
+        int i=0;
+
+        for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" "+o.cara);
+            }
+            expr.accept(this,o);
+            i++;
+        }
+
         return o;
     }
 }

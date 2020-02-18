@@ -1,4 +1,4 @@
-public class DifferentEnsemble extends NonTerminal {
+public class DifferentEnsemble extends NonTerminal  {
 
     public Expression ExprD;
     public Expression ExprG;

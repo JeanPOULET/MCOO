@@ -20,7 +20,7 @@ public class Main {
             exemple1.afficher("");
         }
         catch(InvalidExpression e){
-            System.out.println("Erreur l'expression : "+e.getWrongExpression()+" n'existe pas !");
+            System.out.println("Erreur le type de l'expression : "+e.getWrongExpression()+" n'existe pas !");
         }
         catch (InvalidTyping e ){
             System.out.println("Erreur de typage, le type :"+e.getWrongTyping()+" pour un terminal : ");

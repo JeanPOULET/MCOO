@@ -11,7 +11,7 @@ public class ExprFactory {
         return INSTANCE;
     }
 
-    public Expression makeLeaf(String type, Object value) throws Exception {
+    public Expression makeLeaf(String type, Object value) throws InvalidExpression, InvalidTyping {
         if(type.equals("Litteral")){
             Litteral l = new Litteral((String)value);
             return l;
@@ -23,10 +23,10 @@ public class ExprFactory {
             return b;
         }
 
-        throw new Exception();
+        throw new InvalidExpression(type);
     }
 
-    public Expression makeNode(String type, Expression... children) throws Exception {
+    public Expression makeNode(String type, Expression... children) throws InvalidExpression, InvalidTyping {
         NonTerminal a;
         if(type.equals("Appartient")){
             a = new Appartient(children[0], children[1]);
@@ -89,7 +89,7 @@ public class ExprFactory {
             a = new EnsembleEnExtension(children);
         }
         else{
-            throw new Exception();
+            throw new InvalidExpression(type);
         }
 
         for(int i = 0; i < children.length; i++){

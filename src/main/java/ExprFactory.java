@@ -65,7 +65,7 @@ public class ExprFactory {
             a = new Plus(children[0], children[1]);
         }
         else if(type.equals("PourTout")){
-            a = new PourTout(children[0], children[1]);
+            a = new PourTout(children);
         }
         else if(type.equals("StrictInferieur")){
             a = new StrictInferieur(children[0], children[1]);

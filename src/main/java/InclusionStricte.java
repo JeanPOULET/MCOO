@@ -2,6 +2,7 @@ public class InclusionStricte extends NonTerminal {
 
     public Expression ExprD;
     public Expression ExprG;
+    public char cara = '⊂';
 
     public InclusionStricte(Expression D, Expression G){
         ExprD = D;
@@ -15,4 +16,7 @@ public class InclusionStricte extends NonTerminal {
         ExprG.afficher(prefixe);
     }
 
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
+    }
 }

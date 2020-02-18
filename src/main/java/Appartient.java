@@ -2,7 +2,7 @@ public class Appartient extends NonTerminal {
 
     public Expression ExprD;
     public Expression ExprG;
-    public char ch  = 'a';
+    public char cara  = 'a';
 
     public Appartient(Expression D, Expression G){
         ExprD = D;
@@ -16,7 +16,7 @@ public class Appartient extends NonTerminal {
         ExprG.afficher(prefixe);
     }
 
-    public Object accept(IVisitorPrinter visitor, Object o){
+    public Object accept(IVisitor visitor, Object o){
         return visitor.visit(this);
     }
 

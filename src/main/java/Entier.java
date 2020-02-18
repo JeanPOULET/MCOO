@@ -11,4 +11,9 @@ public class Entier implements Terminal {
     }
 
     public int getValue(){return this.valeur;}
+
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
+    }
+
 }

@@ -1,91 +1,118 @@
-public class ViewerVisitor implements IVisitorPrinter {
+public class ViewerVisitor implements IVisitor {
 
 
-    public void visit(Appartient o) {
+    public Object visit(Appartient o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(Card o) {
-        System.out.print(" "+o.cara+"(");
+    public Object visit(Card o) {
+        System.out.print(" "+o.str+"(");
+        return o;
     }
 
-    public void visit(Conjonction o) {
+    public Object visit(Conjonction o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(DifferentArit o) {
+    public Object visit(DifferentArit o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(DifferentEnsemble o) {
+    public Object visit(DifferentEnsemble o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(Disjonction o) {
+    public Object visit(EnsembleEnExtension o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(EgalArit o) {
+    public Object visit(Disjonction o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(EgalEnsemble o) {
+    public Object visit(EgalArit o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(Entier o) {
+    public Object visit(EgalEnsemble o) {
+        System.out.print(" "+o.cara);
+        return o;
+    }
+
+    public Object visit(Entier o) {
         System.out.print(" "+o.getValue());
+        return o;
     }
 
-    public void visit(ExprBool o) {
+    public Object visit(ExprBool o) {
         System.out.print(" "+o.getValue());
+        return o;
     }
 
-    public void visit(IlExiste o) {
+    public Object visit(IlExiste o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(Inclusion o) {
+    public Object visit(Inclusion o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(InclusionStricte o) {
+    public Object visit(InclusionStricte o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(Inferieur o) {
+    public Object visit(Inferieur o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(Litteral o) {
+    public Object visit(Litteral o) {
         System.out.print(" "+o.getValue());
+        return o;
     }
 
-    public void visit(Moins o) {
+    public Object visit(Moins o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(Not o) {
-        System.out.print(" "+o.cara);
+    public Object visit(Not o) {
+        System.out.print(" "+o.str);
+        return o;
     }
 
-    public void visit(Plus o) {
+    public Object visit(Plus o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(PourTout o) {
+    public Object visit(PourTout o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(StrictInferieur o) {
+    public Object visit(StrictInferieur o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(StrictSuperieur o) {
+    public Object visit(StrictSuperieur o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 
-    public void visit(Superieur o) {
+    public Object visit(Superieur o) {
         System.out.print(" "+o.cara);
+        return o;
     }
 }

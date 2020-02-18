@@ -5,9 +5,11 @@ public class Main {
     public static void main(String[] argv)throws InvalidExpression,InvalidTyping{
 
         try {
+            ViewerVisitor prettyVisitor = new ViewerVisitor();
             ExprFactory f = ExprFactory.getInstance();
             Expression x = f.makeLeaf("Litteral", "x");
             Expression X = f.makeLeaf("Litteral", "X");
+
             Expression[] nb = new Expression[4];
             for (int i = 0; i < 4; i++) {
                 nb[i] = f.makeLeaf("Entier", i);
@@ -17,7 +19,9 @@ public class Main {
                     f.makeNode("EgalArit", X, ens123),
                     f.makeNode("PourTout", x, f.makeNode("Appartient", x, X), f.makeNode("Superieur", x, nb[0]))
             );
-            exemple1.afficher("");
+            exemple1.accept(prettyVisitor,exemple1);
+
+
         }
         catch(InvalidExpression e){
             System.out.println("Erreur le type de l'expression : "+e.getWrongExpression()+" n'existe pas !");

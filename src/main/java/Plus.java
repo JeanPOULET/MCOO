@@ -1,4 +1,4 @@
-public class Plus extends NonTerminal{
+public class Plus extends NonTerminal {
 
     public Expression ExprD;
     public Expression ExprG;
@@ -13,6 +13,10 @@ public class Plus extends NonTerminal{
         prefixe = prefixe+"|___";
         ExprD.afficher(prefixe);
         ExprG.afficher(prefixe);
+    }
+
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
     }
 
 }

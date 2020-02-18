@@ -16,7 +16,7 @@ public class Appartient extends NonTerminal {
         ExprG.afficher(prefixe);
     }
 
-    public Object accept(IVisitor visitor, Object o){
+    public Object accept(IVisitorPrinter visitor, Object o){
         return visitor.visit(this);
     }
 

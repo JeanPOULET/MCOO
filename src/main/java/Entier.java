@@ -9,4 +9,6 @@ public class Entier implements Terminal {
     public Entier(int i){
         valeur = i;
     }
+
+    public int getValue(){return this.valeur;}
 }

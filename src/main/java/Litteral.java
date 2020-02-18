@@ -10,4 +10,6 @@ public class Litteral implements Terminal {
         nom = str;
     }
 
+    public String getValue(){return this.nom;}
+
 }

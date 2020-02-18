@@ -9,4 +9,6 @@ public class ExprBool implements Terminal {
     public ExprBool(boolean val){
         valeur = val;
     }
+
+    public boolean getValue(){return this.valeur;}
 }

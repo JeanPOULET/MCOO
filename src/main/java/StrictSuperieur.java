@@ -2,6 +2,7 @@ public class StrictSuperieur extends NonTerminal {
 
     public Expression ExprD;
     public Expression ExprG;
+    public char cara = '>';
 
     public StrictSuperieur(Expression D, Expression G){
         ExprD = D;
@@ -13,6 +14,10 @@ public class StrictSuperieur extends NonTerminal {
         prefixe = prefixe+"|___";
         ExprD.afficher(prefixe);
         ExprG.afficher(prefixe);
+    }
+
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
     }
 
 }

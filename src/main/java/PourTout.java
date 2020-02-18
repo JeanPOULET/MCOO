@@ -1,7 +1,7 @@
 public class PourTout extends NonTerminal {
 
     public Expression [] expr;
-
+    public char cara = '∀';
 
     public PourTout(Expression...  D){
         expr = D;
@@ -13,6 +13,10 @@ public class PourTout extends NonTerminal {
         for (Expression ex : expr){
             ex.afficher(prefixe);
         }
+    }
+
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
     }
 
 }

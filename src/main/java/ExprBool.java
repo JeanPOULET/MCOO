@@ -9,4 +9,8 @@ public class ExprBool implements Terminal {
     public ExprBool(boolean val){
         valeur = val;
     }
+
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
+    }
 }

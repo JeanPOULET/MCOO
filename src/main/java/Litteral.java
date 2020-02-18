@@ -10,4 +10,8 @@ public class Litteral implements Terminal {
         nom = str;
     }
 
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
+    }
+
 }

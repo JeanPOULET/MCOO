@@ -9,4 +9,8 @@ public class Entier implements Terminal {
     public Entier(int i){
         valeur = i;
     }
+
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
+    }
 }

@@ -9,6 +9,7 @@ public interface IVisitor {
     Object visit(Disjonction o);
     Object visit(EgalArit o);
     Object visit(EgalEnsemble o);
+    Object visit(EnsembleEnExtension o);
     Object visit(Entier o);
     Object visit(ExprBool o);
     Object visit(IlExiste o);

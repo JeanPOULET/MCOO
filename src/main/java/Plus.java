@@ -2,6 +2,7 @@ public class Plus extends NonTerminal {
 
     public Expression ExprD;
     public Expression ExprG;
+    public char cara = '+';
 
     public Plus(Expression D, Expression G){
         ExprD = D;

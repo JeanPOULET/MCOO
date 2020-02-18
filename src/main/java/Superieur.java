@@ -2,6 +2,7 @@ public class Superieur extends NonTerminal {
 
     public Expression ExprD;
     public Expression ExprG;
+    public char cara = '≥';
 
     public Superieur(Expression D, Expression G){
         ExprD = D;
@@ -15,4 +16,7 @@ public class Superieur extends NonTerminal {
         ExprG.afficher(prefixe);
     }
 
+    public Object accept(IVisitor visitor, Object o){
+        return visitor.visit(this);
+    }
 }

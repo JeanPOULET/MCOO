@@ -1,10 +1,10 @@
-public class Inclusion extends NonTerminal {
+public class Inclusion extends ExprEnsembliste {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '⊆';
 
-    public Inclusion(Expression D, Expression G){
+    public Inclusion(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

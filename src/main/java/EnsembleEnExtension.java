@@ -1,10 +1,10 @@
-public class EnsembleEnExtension extends NonTerminal {
+public class EnsembleEnExtension extends Ensemble {
 
     public Expression [] Expr;
     public char cara = '{';
 
-    public EnsembleEnExtension(Expression... D){
-        Expr = D;
+    public EnsembleEnExtension(Expression... E){
+        Expr = E;
     }
 
     public void afficher(String prefixe){

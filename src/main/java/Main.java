@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 
 public class Main {
 
@@ -6,6 +6,7 @@ public class Main {
 
         try {
             ViewerVisitor prettyVisitor = new ViewerVisitor();
+            VerificatorVisitor verificatorVisitor = new VerificatorVisitor();
             ExprFactory f = ExprFactory.getInstance();
             Expression x = f.makeLeaf("Litteral", "x");
             Expression X = f.makeLeaf("Litteral", "X");
@@ -19,10 +20,15 @@ public class Main {
                     f.makeNode("EgalArit", X, ens123),
                     f.makeNode("PourTout", x, f.makeNode("Appartient", x, X), f.makeNode("Superieur", x, nb[0]))
             );
+            Expression ex = f.makeNode("Appartient", x, x);
             exemple1.accept(prettyVisitor,exemple1);
-
-
+            exemple1.accept(verificatorVisitor,exemple1);
+            System.out.println("");
+            for(String str : verificatorVisitor.erreurs){
+                System.out.print(str);
+            }
         }
+
         catch(InvalidExpression e){
             System.out.println("Erreur le type de l'expression : "+e.getWrongExpression()+" n'existe pas !");
         }

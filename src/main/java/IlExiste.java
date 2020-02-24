@@ -1,19 +1,18 @@
-public class IlExiste extends NonTerminal {
+public class IlExiste extends ExprLogique {
 
-    public Expression ExprD;
-    public Expression ExprG;
+    public Expression [] expr;
     public char cara = '∃';
 
-    public IlExiste(Expression D, Expression G){
-        ExprD = D;
-        ExprG = G;
+    public IlExiste(Expression...  E){
+        expr = E;
     }
 
     public void afficher(String prefixe){
         System.out.println(prefixe + "|___ IlExiste");
         prefixe = prefixe+"|___";
-        ExprD.afficher(prefixe);
-        ExprG.afficher(prefixe);
+        for (Expression ex : expr){
+            ex.afficher(prefixe);
+        }
     }
 
     public Object accept(IVisitor visitor, Object o){

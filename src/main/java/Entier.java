@@ -1,4 +1,4 @@
-public class Entier implements Terminal {
+public class Entier extends ExprArithmetique implements Terminal{
 
     private int valeur;
 

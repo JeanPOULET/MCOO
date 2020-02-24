@@ -1,10 +1,10 @@
-public class Appartient extends NonTerminal {
+public class Appartient extends ExprEnsembliste {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara  = '∈';
 
-    public Appartient(Expression D, Expression G){
+    public Appartient(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

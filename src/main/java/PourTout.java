@@ -1,10 +1,10 @@
-public class PourTout extends NonTerminal {
+public class PourTout extends ExprLogique {
 
     public Expression [] expr;
     public char cara = '∀';
 
-    public PourTout(Expression...  D){
-        expr = D;
+    public PourTout(Expression...  E){
+        expr = E;
     }
 
     public void afficher(String prefixe) {

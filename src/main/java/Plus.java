@@ -1,10 +1,10 @@
-public class Plus extends NonTerminal {
+public class Plus extends ExprArithmetique {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '+';
 
-    public Plus(Expression D, Expression G){
+    public Plus(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

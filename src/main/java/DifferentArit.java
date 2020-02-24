@@ -1,10 +1,10 @@
-public class DifferentArit extends NonTerminal {
+public class DifferentArit extends ComparaisonArithmetique {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '≠';
 
-    public DifferentArit(Expression D, Expression G){
+    public DifferentArit(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

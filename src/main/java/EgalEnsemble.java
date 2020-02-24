@@ -1,10 +1,10 @@
-public class EgalEnsemble extends NonTerminal {
+public class EgalEnsemble extends ComparaisonEnsembliste {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '=';
 
-    public EgalEnsemble(Expression D, Expression G){
+    public EgalEnsemble(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

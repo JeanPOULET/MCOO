@@ -1,9 +1,9 @@
-public class Card extends NonTerminal {
+public class Card extends ExprArithmetique {
     public Expression Expr;
     public String str = "card";
 
-    public Card(Expression D){
-        Expr = D;
+    public Card(Expression E){
+        Expr = E;
     }
 
     public void afficher(String prefixe){

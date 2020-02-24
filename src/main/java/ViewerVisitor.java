@@ -122,11 +122,16 @@ public class ViewerVisitor implements IVisitor {
     }
 
     public Object visit(IlExiste o) {
-        System.out.print(" "+o.cara);
-        System.out.print(" (");
-
+        int i=0;
+        System.out.print(" ( "+o.cara);
         for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" .");
+            }else if(i==2){
+                System.out.print(" ∧");
+            }
             expr.accept(this,o);
+            i++;
         }
         System.out.print(" )");
         return o;
@@ -134,7 +139,6 @@ public class ViewerVisitor implements IVisitor {
 
     public Object visit(Inclusion o) {
         int i=0;
-
         for(Expression expr : o.ExpressionList){
             if(i==1){
                 System.out.print(" "+o.cara);
@@ -213,11 +217,15 @@ public class ViewerVisitor implements IVisitor {
 
     public Object visit(PourTout o) {
         int i=0;
-        System.out.print(" "+o.cara);
-        System.out.print(" (");
-
+        System.out.print(" ( "+o.cara);
         for(Expression expr : o.ExpressionList){
+            if(i==1){
+                System.out.print(" .");
+            }else if(i==2){
+                System.out.print(" ⇒");
+            }
             expr.accept(this,o);
+            i++;
         }
         System.out.print(" )");
         return o;

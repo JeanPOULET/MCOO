@@ -1,10 +1,10 @@
-public class EgalArit extends NonTerminal {
+public class EgalArit extends ComparaisonArithmetique {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '=';
 
-    public EgalArit(Expression D, Expression G){
+    public EgalArit(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

@@ -1,4 +1,4 @@
-public class Inferieur extends NonTerminal {
+public class Inferieur extends ComparaisonArithmetique {
 
     public Expression ExprD;
     public Expression ExprG;

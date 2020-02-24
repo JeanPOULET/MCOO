@@ -1,10 +1,10 @@
-public class Disjonction extends NonTerminal {
+public class Disjonction extends ExprLogique {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '∨';
 
-    public Disjonction(Expression D, Expression G){
+    public Disjonction(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

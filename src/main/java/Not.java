@@ -1,10 +1,10 @@
-public class Not extends NonTerminal  {
+public class Not extends ExprLogique  {
 
     public Expression Expr;
     public String str = "not";
 
-    public Not(Expression D){
-        Expr = D;
+    public Not(Expression E){
+        Expr = E;
     }
 
     public void afficher(String prefixe){

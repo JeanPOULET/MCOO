@@ -1,10 +1,10 @@
-public class DifferentEnsemble extends NonTerminal  {
+public class DifferentEnsemble extends ComparaisonEnsembliste  {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '≠';
 
-    public DifferentEnsemble(Expression D, Expression G){
+    public DifferentEnsemble(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

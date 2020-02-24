@@ -6,7 +6,6 @@ public interface IVisitor {
     Object visit(DifferentArit o);
     Object visit(DifferentEnsemble o);
     Object visit(EnsembleEnExtension o);
-
     Object visit(Disjonction o);
     Object visit(EgalArit o);
     Object visit(EgalEnsemble o);

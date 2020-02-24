@@ -1,10 +1,10 @@
-public class Conjonction extends NonTerminal {
+public class Conjonction extends ExprLogique {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '∧';
 
-    public Conjonction(Expression D, Expression G){
+    public Conjonction(Expression G, Expression D){
         ExprG = G;
         ExprD = D;
     }

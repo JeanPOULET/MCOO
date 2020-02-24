@@ -1,10 +1,10 @@
-public class Superieur extends NonTerminal {
+public class Superieur extends ComparaisonArithmetique {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '≥';
 
-    public Superieur(Expression D, Expression G){
+    public Superieur(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

@@ -1,4 +1,4 @@
-public class ExprBool implements Terminal {
+public class ExprBool extends ExprLogique implements Terminal {
 
     private boolean valeur;
 

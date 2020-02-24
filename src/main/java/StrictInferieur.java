@@ -1,10 +1,10 @@
-public class StrictInferieur extends NonTerminal {
+public class StrictInferieur extends ComparaisonArithmetique {
 
     public Expression ExprD;
     public Expression ExprG;
     public char cara = '<';
 
-    public StrictInferieur(Expression D, Expression G){
+    public StrictInferieur(Expression G, Expression D){
         ExprD = D;
         ExprG = G;
     }

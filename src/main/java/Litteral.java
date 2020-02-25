@@ -1,6 +1,7 @@
 public class Litteral extends ExprArithmetique implements Terminal {
 
     private String nom;
+    public boolean declare = false;
 
     public void afficher(String prefixe){
         System.out.println(prefixe + "|___ Litteral : "+nom);

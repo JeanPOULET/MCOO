@@ -18,15 +18,14 @@ public class Main {
             Expression ens123 = f.makeNode("EnsembleEnExtension", nb[1], nb[2], nb[3]);
             Expression exemple1 = f.makeNode("Conjonction",
                     f.makeNode("EgalArit", X, ens123),
-                    f.makeNode("PourTout", x, f.makeNode("Appartient", x, X), f.makeNode("Superieur", x, nb[0]))
+                    f.makeNode("Disjonction",
+                    f.makeNode("PourTout", x, f.makeNode("Appartient", x, X), f.makeNode("Superieur", X, nb[0])),
+                    f.makeNode("StrictInferieur", x, X))
             );
             Expression ex = f.makeNode("Appartient", x, x);
             exemple1.accept(prettyVisitor,exemple1);
             exemple1.accept(verificatorVisitor,exemple1);
-            System.out.println("");
-            for(String str : verificatorVisitor.erreurs){
-                System.out.print(str);
-            }
+            verificatorVisitor.printError();
         }
 
         catch(InvalidExpression e){

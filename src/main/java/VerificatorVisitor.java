@@ -33,7 +33,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Card o) {
@@ -45,7 +45,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Conjonction o) {
@@ -62,7 +62,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(DifferentArit o) {
@@ -79,7 +79,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(DifferentEnsemble o) {
@@ -97,7 +97,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(EnsembleEnExtension o) {
@@ -112,7 +112,7 @@ public class VerificatorVisitor implements IVisitor {
 
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Disjonction o) {
@@ -129,7 +129,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(EgalArit o) {
@@ -149,7 +149,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(EgalEnsemble o) {
@@ -166,15 +166,16 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Entier o) {
-        return o;
+
+        return erreurs;
     }
 
     public Object visit(ExprBool o) {
-        return o;
+        return erreurs;
     }
 
     public Object visit(IlExiste o) {
@@ -199,7 +200,7 @@ public class VerificatorVisitor implements IVisitor {
             expr.accept(this, o);
             ((Litteral) o.expr[0]).declare = false;
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Inclusion o) {
@@ -216,7 +217,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(InclusionStricte o) {
@@ -233,7 +234,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Inferieur o) {
@@ -250,7 +251,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Litteral o) {
@@ -259,7 +260,7 @@ public class VerificatorVisitor implements IVisitor {
                 erreurs.add("Le litteral "+o.getValue()+" est mal déclaré\n");
             }
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Moins o) {
@@ -276,7 +277,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Not o) {
@@ -289,7 +290,7 @@ public class VerificatorVisitor implements IVisitor {
 
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Plus o) {
@@ -306,7 +307,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(PourTout o) {
@@ -336,7 +337,7 @@ public class VerificatorVisitor implements IVisitor {
             expr.accept(this, o);
             ((Litteral) o.expr[0]).declare = false;
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(StrictInferieur o) {
@@ -353,7 +354,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(StrictSuperieur o) {
@@ -370,7 +371,7 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 
     public Object visit(Superieur o) {
@@ -387,6 +388,6 @@ public class VerificatorVisitor implements IVisitor {
             }
             expr.accept(this, o);
         }
-        return o;
+        return erreurs;
     }
 }

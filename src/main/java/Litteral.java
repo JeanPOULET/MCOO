@@ -1,4 +1,4 @@
-public class Litteral extends ExprArithmetique implements Terminal {
+public class Litteral extends NonTerminal implements Terminal {
 
     private String nom;
     public boolean declare = false;
